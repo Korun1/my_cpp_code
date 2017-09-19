@@ -7,7 +7,7 @@
 #include<algorithm>
 using namespace std;
 const int MAXSIZE = 100000 + 5;
-int n,m;
+int n,m,Q;
 int x[MAXSIZE],y[MAXSIZE],z[MAXSIZE];
 int uset[MAXSIZE];  
   
@@ -23,7 +23,7 @@ map<int,bool>Map[MAXSIZE<<1];
 
 int main()
 {
-	cin >> n >> m >> q;
+	cin >> n >> m >> Q; //n个人， m对关系，Q个询问
 	int Increasing = n;
 	makeSet(n);
 	for (int i=0;i<m;i++){
@@ -65,7 +65,7 @@ int main()
 		Map[ x_father ][ y[i] ] = true;
 		Map[ y_father ][ x[i] ] = true;
 	}
-	for (int i=0;i<q;i++){
+	for (int i=0;i<Q;i++){
 		int a,b;
 		cin>>a>>b;
 		int a_father = find(a);
