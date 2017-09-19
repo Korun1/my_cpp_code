@@ -88,6 +88,7 @@ int main()
 	for (int i=1;i<=n-1;i++){ // 树的n-1条边
 		int node_a,node_b,value;
 		scanf("%d %d %d",&node_a,&node_b,&value);
+		if (node_a > node_b) swap(node_a,node_b);
 		Edge[node_a].push_back(node_b);
 		Value[node_a].push_back(value);
 	}
