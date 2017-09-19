@@ -23,7 +23,7 @@ int solve(int root){
 	}
 	int L_value = son[0], R_value = son[1];
 	int top;
-	if ( L_value > 0  && R_value > 0 ){
+	if ( L_value >= 0  && R_value >= 0 ){
 		top = L_value + R_value;
 		L[root] = R[root] = true;
 		if ( top > res ){
@@ -31,8 +31,8 @@ int solve(int root){
 			node = root;
 		}
 	}
-	else if ( L_value > 0 || R_value > 0 ){
-		if ( L_value > 0 ){
+	else if ( L_value >= 0 || R_value >= 0 ){
+		if ( L_value >= 0 ){
 			top = L_value;
 			L[root] = true;
 			if (top > res){
