@@ -21,7 +21,7 @@ int solve(int root){
 		int val_i = Value[root][i];
 		son[i] = solve(node_i) + val_i;
 	}
-	int L_value = max(son[0],0), R_value = max(son[1],0);
+	int L_value = son[0], R_value = son[1];
 	int top;
 	if ( L_value > 0  && R_value > 0 ){
 		top = L_value + R_value;
