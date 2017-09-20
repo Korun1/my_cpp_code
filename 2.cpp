@@ -24,7 +24,7 @@ map<int,bool>Map[MAXSIZE<<1];
 int main()
 {
 	cin >> n >> m >> Q; //n个人， m对关系，Q个询问
-	int Increasing = n;
+	int Increasing = n+1;
 	makeSet(n);
 	for (int i=0;i<m;i++){
 		cin >> x[i] >> y[i] >> z[i];
